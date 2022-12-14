@@ -11,15 +11,18 @@ body {
 
 main{
     height: max-content;
-    display:block
+    display:flex;
+    flex-wrap: wrap;
+   
 }
 
 section {
-    height:max-content;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     padding:20px;
     justify-content: space-between;
+    width:100%;
 
 }
 
@@ -49,8 +52,7 @@ h6 {
  h1 {
    
     font-size: 4rem;
-    border-style: none solid none none;
-    line-height: 
+    
 }
 
  
@@ -61,8 +63,12 @@ display: flex;
 flex-direction: column;
 align-items: center;
 
+
 }
  
+.project-figures {
+    width:50%;
+}
 figcaption {
     color: black;
     font-weight: bold;
@@ -76,8 +82,15 @@ img {
    
 }
 
+/*formats the headings of each section showing on the side to only use the shown percent of the page width*/
 .sidebar {
     width: 20%;
+    border-right: 3px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     
 }
 
@@ -105,6 +118,7 @@ img {
     margin-left: 25px
 }
 
+/*formats links in contact section of page*/
  .contact {
     color: black;
  }
@@ -115,6 +129,7 @@ a {
     text-decoration: none;
 }
 
+/*formats about me paragraph*/
 p {
     width: 80%; 
     float:right;
@@ -129,9 +144,10 @@ p {
     color: white;
 }
 
+/*formats work section of page*/
 .work {
     width:80%;
-    background: rgb(209, 209, 152);
+   
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -142,10 +158,14 @@ p {
     
 }
 
+/*highlight images of projects upon hover*/
 .work img:hover {
     opacity:.75;
 }
 
+
+
+/*formats main project container as flexbox and centers the content in the middle of the container*/
 .main-project{
     display: flex;
     justify-content: center;
@@ -153,13 +173,17 @@ p {
 
 /*formats the size of the main project image*/
 .main-project-img {
-    width: 80%;    
+    width: 100%;    
     
+}
+
+.main-project figure {
+    width: 100%;
 }
 /*formats size of all project images except main project image*/
 .project-img {
-   width: 500px;
-   height 281.25px;
+   width: 100%;
+   height 281px;
 }
 
 /*formats all project containers except first project*/
@@ -170,10 +194,47 @@ p {
     justify-content: center;
 }
 
-/*formats the link to each of the individual project*/
+/*formats the link to each of the individual projects*/
 .project-link {padding: 20px;
     font-size: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;}
+    align-items: center;
+    width:100%;
+}
    
+/* media query for tablet and smaller screens*/
+@media screen and (max-width: 992px) {
+   
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+     
+    }
+
+    header {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    h1 {
+        border-style: none none solid none;
+       
+    }
+
+    .sidebar {
+        height: initial;
+        text-align: center;
+        border: none
+       
+    }
+ 
+    .project-figures {
+        width: 100%;
+    }
+    
+  }
+  
+  
