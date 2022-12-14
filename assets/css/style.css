@@ -142,6 +142,10 @@ p {
     
 }
 
+.work img:hover {
+    opacity:.75;
+}
+
 .main-project{
     display: flex;
     justify-content: center;
