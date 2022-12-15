@@ -55,7 +55,7 @@ h6 {
     
 }
 
- 
+/*default format for figures on the page*/
 figure {
     padding: 20px;
 font-size: 20px;
@@ -66,9 +66,12 @@ align-items: center;
 
 }
  
+/*adjust width of figures in work section of page except very top figure*/
 .project-figures {
     width:50%;
 }
+
+/*format figure captions*/
 figcaption {
     color: black;
     font-weight: bold;
@@ -203,7 +206,7 @@ p {
     width:100%;
 }
    
-/* media query for tablet and smaller screens*/
+/* media query for tablet and smaller screens to adjust formatting for smaller screens*/
 @media screen and (max-width: 992px) {
    
     section {
